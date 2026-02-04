@@ -1,0 +1,89 @@
+{
+  "agent_name": "Reminder & Engagement Agent",
+  "agent_id": "69830c70eaaf1d1b5f77f4ec",
+  "agent_purpose": "recommendation",
+  "description": "Analyzes volunteer patterns, sends personalized reminders, recommends alternate zones, detects burnout, and maintains engagement scores",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "volunteer_id": "string",
+      "routine_detected": {
+        "usual_time": "string",
+        "frequency": "string",
+        "zones": [
+          "string"
+        ]
+      },
+      "reminder_sent": "boolean",
+      "reminder_message": "string",
+      "alternate_zones": [
+        "any"
+      ],
+      "engagement_score": "number",
+      "burnout_risk": "string",
+      "actions": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "volunteer_id": "V001",
+      "routine_detected": {
+        "usual_time": "08:00",
+        "frequency": "daily",
+        "zones": [
+          "Zone A"
+        ]
+      },
+      "reminder_sent": true,
+      "reminder_message": "Hi V001, we noticed you missed your usual feeding time at Zone A today at 8:00 AM. We hope everything is okay! Keep up the great work with your 14-day streak!",
+      "alternate_zones": [],
+      "engagement_score": 85,
+      "burnout_risk": "low",
+      "actions": [
+        "send_nudge",
+        "celebrate_streak"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Reminder & Engagement Agent",
+      "timestamp": "2023-10-17T10:00:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-04T09:11:15.727102",
+  "test_message_used": "Provide sample recommendations for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "volunteer_id": "V001",
+      "routine_detected": {
+        "usual_time": "08:00",
+        "frequency": "daily",
+        "zones": [
+          "Zone A"
+        ]
+      },
+      "reminder_sent": true,
+      "reminder_message": "Hi V001, we noticed you missed your usual feeding time at Zone A today at 8:00 AM. We hope everything is okay! Keep up the great work with your 14-day streak!",
+      "alternate_zones": [],
+      "engagement_score": 85,
+      "burnout_risk": "low",
+      "actions": [
+        "send_nudge",
+        "celebrate_streak"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Reminder & Engagement Agent",
+      "timestamp": "2023-10-17T10:00:00Z"
+    }
+  },
+  "test_passed": true
+}

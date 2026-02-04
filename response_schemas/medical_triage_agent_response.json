@@ -1,0 +1,129 @@
+{
+  "agent_name": "Medical Triage Agent",
+  "agent_id": "69830c8b29c2f18838004b05",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes medical reports, classifies urgency, creates cases, notifies doctors, and flags critical cases to admin",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "case_id": "string",
+      "urgency": "string",
+      "injury_type": "string",
+      "symptoms": [
+        "string"
+      ],
+      "analysis": "string",
+      "doctors_notified": [
+        {
+          "doctor_id": "string",
+          "name": "string",
+          "distance_km": "number",
+          "specialization": "string"
+        }
+      ],
+      "expected_response_time": "string",
+      "admin_flagged": "boolean",
+      "recommendations": [
+        "string"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "case_id": "MC-19.0760-72.8777-001",
+      "urgency": "HIGH",
+      "injury_type": "wound",
+      "symptoms": [
+        "open leg wound",
+        "limping",
+        "pain"
+      ],
+      "analysis": "The cat has an open wound on its leg, is limping, and is visibly in pain. This requires urgent medical attention to prevent infection and alleviate the pain.",
+      "doctors_notified": [
+        {
+          "doctor_id": "D001",
+          "name": "Dr. Anita Rao",
+          "distance_km": 3.2,
+          "specialization": "Veterinarian"
+        },
+        {
+          "doctor_id": "D002",
+          "name": "Dr. Sameer Khan",
+          "distance_km": 4.5,
+          "specialization": "Animal Surgeon"
+        },
+        {
+          "doctor_id": "D003",
+          "name": "Dr. Priya Mehta",
+          "distance_km": 4.8,
+          "specialization": "Veterinarian"
+        }
+      ],
+      "expected_response_time": "120 minutes",
+      "admin_flagged": false,
+      "recommendations": [
+        "Immediate wound cleaning",
+        "Pain management",
+        "Medical evaluation for possible infection and further injury treatment"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Medical Triage Agent",
+      "timestamp": "2023-10-25T14:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-04T09:11:22.540917",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "case_id": "MC-19.0760-72.8777-001",
+      "urgency": "HIGH",
+      "injury_type": "wound",
+      "symptoms": [
+        "open leg wound",
+        "limping",
+        "pain"
+      ],
+      "analysis": "The cat has an open wound on its leg, is limping, and is visibly in pain. This requires urgent medical attention to prevent infection and alleviate the pain.",
+      "doctors_notified": [
+        {
+          "doctor_id": "D001",
+          "name": "Dr. Anita Rao",
+          "distance_km": 3.2,
+          "specialization": "Veterinarian"
+        },
+        {
+          "doctor_id": "D002",
+          "name": "Dr. Sameer Khan",
+          "distance_km": 4.5,
+          "specialization": "Animal Surgeon"
+        },
+        {
+          "doctor_id": "D003",
+          "name": "Dr. Priya Mehta",
+          "distance_km": 4.8,
+          "specialization": "Veterinarian"
+        }
+      ],
+      "expected_response_time": "120 minutes",
+      "admin_flagged": false,
+      "recommendations": [
+        "Immediate wound cleaning",
+        "Pain management",
+        "Medical evaluation for possible infection and further injury treatment"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Medical Triage Agent",
+      "timestamp": "2023-10-25T14:30:00Z"
+    }
+  },
+  "test_passed": true
+}

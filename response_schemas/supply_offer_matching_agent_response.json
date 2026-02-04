@@ -1,0 +1,109 @@
+{
+  "agent_name": "Supply & Offer Matching Agent",
+  "agent_id": "69830ca651b9f371d4d6a6c2",
+  "agent_purpose": "recommendation",
+  "description": "Matches medical cases with vendor offers, recommends nearby clinics with discounts, and sends contextual notifications",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "matched_offers": [
+        {
+          "offer_id": "string",
+          "vendor_name": "string",
+          "offer_type": "string",
+          "service_category": "string",
+          "discount_value": "string",
+          "distance_km": "number",
+          "expiry_date": "string",
+          "redemption_code": "string"
+        }
+      ],
+      "recommended_clinics": [
+        {
+          "clinic_id": "string",
+          "name": "string",
+          "distance_km": "number",
+          "specialization": "string",
+          "active_offers": "number",
+          "rating": "number"
+        }
+      ],
+      "notification_sent": "boolean",
+      "relevance_score": "number"
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "matched_offers": [
+        {
+          "offer_id": "offer123",
+          "vendor_name": "Healthy Paws Veterinary",
+          "offer_type": "discount",
+          "service_category": "veterinary",
+          "discount_value": "15%",
+          "distance_km": 4.5,
+          "expiry_date": "2023-12-31",
+          "redemption_code": "HEALTHYPAWS15"
+        }
+      ],
+      "recommended_clinics": [
+        {
+          "clinic_id": "clinic456",
+          "name": "Urban Vet Clinic",
+          "distance_km": 3.2,
+          "specialization": "trauma treatment",
+          "active_offers": 2,
+          "rating": 4.7
+        }
+      ],
+      "notification_sent": true,
+      "relevance_score": 0.95
+    },
+    "metadata": {
+      "agent_name": "Supply & Offer Matching Agent",
+      "timestamp": "2023-10-20T14:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-04T09:11:24.551818",
+  "test_message_used": "Provide sample recommendations for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "matched_offers": [
+        {
+          "offer_id": "offer123",
+          "vendor_name": "Healthy Paws Veterinary",
+          "offer_type": "discount",
+          "service_category": "veterinary",
+          "discount_value": "15%",
+          "distance_km": 4.5,
+          "expiry_date": "2023-12-31",
+          "redemption_code": "HEALTHYPAWS15"
+        }
+      ],
+      "recommended_clinics": [
+        {
+          "clinic_id": "clinic456",
+          "name": "Urban Vet Clinic",
+          "distance_km": 3.2,
+          "specialization": "trauma treatment",
+          "active_offers": 2,
+          "rating": 4.7
+        }
+      ],
+      "notification_sent": true,
+      "relevance_score": 0.95
+    },
+    "metadata": {
+      "agent_name": "Supply & Offer Matching Agent",
+      "timestamp": "2023-10-20T14:30:00Z"
+    }
+  },
+  "test_passed": true
+}

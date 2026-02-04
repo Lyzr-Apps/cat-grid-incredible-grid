@@ -1,0 +1,49 @@
+{
+  "agent_name": "Platform Orchestrator Agent",
+  "agent_id": "69830ce5710a251ef6c8a621",
+  "test_message": "A volunteer just submitted a check-in for Zone A at 8:30 AM. Another volunteer reported an injured cat with bleeding wounds in Zone C. A vendor posted a new 20% discount offer for veterinary services. Route these events to appropriate sub-agents and aggregate responses.",
+  "expected_purpose": "assistant",
+  "timestamp": "2026-02-04T09:13:26.622358",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "event_type": "check-in | medical_report | offer",
+      "agents_invoked": [
+        "Coverage Monitoring Agent",
+        "Reminder & Engagement Agent",
+        "Medical Triage Agent",
+        "Supply & Offer Matching Agent"
+      ],
+      "aggregated_response": {
+        "coverage": {
+          "Zone A": "Volunteer check-in processed successfully."
+        },
+        "engagement": {
+          "Zone A": "Engagement metrics updated."
+        },
+        "medical": {
+          "Zone C": "Injured cat reported. Triage status: CRITICAL, immediate action required."
+        },
+        "offers": {
+          "Zone C": "Veterinary services offer matched with medical need."
+        },
+        "patterns": {}
+      },
+      "conflicts_resolved": [],
+      "actions_taken": [
+        "Checked coverage status in Zone A",
+        "Engagement metrics updated for volunteer in Zone A",
+        "Escalated medical case in Zone C to nearby veterinary service",
+        "Matched new offer to reported medical need"
+      ],
+      "duplicate_alerts_prevented": 0
+    },
+    "metadata": {
+      "agent_name": "Platform Orchestrator Agent",
+      "timestamp": "2023-10-03T08:30:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"event_type\": \"check-in | medical_report | offer\",\n    \"agents_invoked\": [\"Coverage Monitoring Agent\", \"Reminder & Engagement Agent\", \"Medical Triage Agent\", \"Supply & Offer Matching Agent\"],\n    \"aggregated_response\": {\n      \"coverage\": {\n        \"Zone A\": \"Volunteer check-in processed successfully.\"\n      },\n      \"engagement\": {\n        \"Zone A\": \"Engagement metrics updated.\"\n      },\n      \"medical\": {\n        \"Zone C\": \"Injured cat reported. Triage status: CRITICAL, immediate action required.\"\n      },\n      \"offers\": {\n        \"Zone C\": \"Veterinary services offer matched with medical need.\"\n      },\n      \"patterns\": {}\n    },\n    \"conflicts_resolved\": [],\n    \"actions_taken\": [\n      \"Checked coverage status in Zone A\",\n      \"Engagement metrics updated for volunteer in Zone A\",\n      \"Escalated medical case in Zone C to nearby veterinary service\",\n      \"Matched new offer to reported medical need\"\n    ],\n    \"duplicate_alerts_prevented\": 0\n  },\n  \"metadata\": {\n    \"agent_name\": \"Platform Orchestrator Agent\",\n    \"timestamp\": \"2023-10-03T08:30:00Z\"\n  }\n}"
+}

@@ -1,0 +1,138 @@
+{
+  "agent_name": "Coverage Monitoring Agent",
+  "agent_id": "69830c5851b9f371d4d6a6c1",
+  "agent_purpose": "analyzer",
+  "description": "Monitors feeding zones, detects coverage gaps, identifies nearby volunteers, creates alerts, and escalates chronic neglect issues",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "zone_status": "string",
+      "uncovered_zones": [
+        {
+          "zone_id": "string",
+          "last_fed": "string",
+          "urgency": "string"
+        }
+      ],
+      "nearby_volunteers": [
+        {
+          "user_id": "string",
+          "distance_km": "number",
+          "availability": "string"
+        }
+      ],
+      "alerts_created": [
+        {
+          "alert_id": "string",
+          "zone_id": "string",
+          "volunteers_notified": "number"
+        }
+      ],
+      "escalations": [
+        "any"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "zone_status": "red",
+      "uncovered_zones": [
+        {
+          "zone_id": "Zone A",
+          "last_fed": "26 hours ago",
+          "urgency": "high"
+        },
+        {
+          "zone_id": "Zone C",
+          "last_fed": "48 hours ago",
+          "urgency": "high"
+        }
+      ],
+      "nearby_volunteers": [
+        {
+          "user_id": "volunteer_123",
+          "distance_km": 1.2,
+          "availability": "active"
+        },
+        {
+          "user_id": "volunteer_456",
+          "distance_km": 3.4,
+          "availability": "active"
+        }
+      ],
+      "alerts_created": [
+        {
+          "alert_id": "alert_001",
+          "zone_id": "Zone A",
+          "volunteers_notified": 2
+        },
+        {
+          "alert_id": "alert_002",
+          "zone_id": "Zone C",
+          "volunteers_notified": 2
+        }
+      ],
+      "escalations": []
+    },
+    "metadata": {
+      "agent_name": "Coverage Monitoring Agent",
+      "timestamp": "2023-10-11T10:23:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-04T09:11:13.410940",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "zone_status": "red",
+      "uncovered_zones": [
+        {
+          "zone_id": "Zone A",
+          "last_fed": "26 hours ago",
+          "urgency": "high"
+        },
+        {
+          "zone_id": "Zone C",
+          "last_fed": "48 hours ago",
+          "urgency": "high"
+        }
+      ],
+      "nearby_volunteers": [
+        {
+          "user_id": "volunteer_123",
+          "distance_km": 1.2,
+          "availability": "active"
+        },
+        {
+          "user_id": "volunteer_456",
+          "distance_km": 3.4,
+          "availability": "active"
+        }
+      ],
+      "alerts_created": [
+        {
+          "alert_id": "alert_001",
+          "zone_id": "Zone A",
+          "volunteers_notified": 2
+        },
+        {
+          "alert_id": "alert_002",
+          "zone_id": "Zone C",
+          "volunteers_notified": 2
+        }
+      ],
+      "escalations": []
+    },
+    "metadata": {
+      "agent_name": "Coverage Monitoring Agent",
+      "timestamp": "2023-10-11T10:23:00Z"
+    }
+  },
+  "test_passed": true
+}

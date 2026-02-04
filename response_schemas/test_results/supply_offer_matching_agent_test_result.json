@@ -1,0 +1,43 @@
+{
+  "agent_name": "Supply & Offer Matching Agent",
+  "agent_id": "69830ca651b9f371d4d6a6c2",
+  "test_message": "A medical case for trauma treatment has been created at location 19.0760, 72.8777. Match with relevant vendor offers for veterinary services, recommend nearby clinics with active discounts, and suggest any free medical camps in the area.",
+  "expected_purpose": "recommendation",
+  "timestamp": "2026-02-04T09:11:24.551213",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "matched_offers": [
+        {
+          "offer_id": "offer123",
+          "vendor_name": "Healthy Paws Veterinary",
+          "offer_type": "discount",
+          "service_category": "veterinary",
+          "discount_value": "15%",
+          "distance_km": 4.5,
+          "expiry_date": "2023-12-31",
+          "redemption_code": "HEALTHYPAWS15"
+        }
+      ],
+      "recommended_clinics": [
+        {
+          "clinic_id": "clinic456",
+          "name": "Urban Vet Clinic",
+          "distance_km": 3.2,
+          "specialization": "trauma treatment",
+          "active_offers": 2,
+          "rating": 4.7
+        }
+      ],
+      "notification_sent": true,
+      "relevance_score": 0.95
+    },
+    "metadata": {
+      "agent_name": "Supply & Offer Matching Agent",
+      "timestamp": "2023-10-20T14:30:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"matched_offers\": [\n      {\n        \"offer_id\": \"offer123\",\n        \"vendor_name\": \"Healthy Paws Veterinary\",\n        \"offer_type\": \"discount\",\n        \"service_category\": \"veterinary\",\n        \"discount_value\": \"15%\",\n        \"distance_km\": 4.5,\n        \"expiry_date\": \"2023-12-31\",\n        \"redemption_code\": \"HEALTHYPAWS15\"\n      }\n    ],\n    \"recommended_clinics\": [\n      {\n        \"clinic_id\": \"clinic456\",\n        \"name\": \"Urban Vet Clinic\",\n        \"distance_km\": 3.2,\n        \"specialization\": \"trauma treatment\",\n        \"active_offers\": 2,\n        \"rating\": 4.7\n      }\n    ],\n    \"notification_sent\": true,\n    \"relevance_score\": 0.95\n  },\n  \"metadata\": {\n    \"agent_name\": \"Supply & Offer Matching Agent\",\n    \"timestamp\": \"2023-10-20T14:30:00Z\"\n  }\n}"
+}

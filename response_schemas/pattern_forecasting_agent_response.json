@@ -1,0 +1,167 @@
+{
+  "agent_name": "Pattern & Forecasting Agent",
+  "agent_id": "69830cc229c2f18838004b09",
+  "agent_purpose": "analyzer",
+  "description": "Analyzes historical patterns, predicts risk zones, identifies overburdened volunteers, and generates weekly insights",
+  "response_schema": {
+    "status": "string",
+    "result": {
+      "chronic_neglect_zones": [
+        {
+          "zone_id": "string",
+          "missed_days_last_month": "number",
+          "pattern": "string"
+        }
+      ],
+      "risk_forecast_tomorrow": [
+        {
+          "zone_id": "string",
+          "risk_level": "string",
+          "confidence": "number",
+          "recommended_action": "string"
+        }
+      ],
+      "overburdened_volunteers": [
+        {
+          "user_id": "string",
+          "zones_assigned": "number",
+          "burnout_risk": "number"
+        }
+      ],
+      "weekly_insights": {
+        "coverage_percentage": "number",
+        "total_check_ins": "number",
+        "medical_cases": "number",
+        "volunteer_count": "number",
+        "recommendations": [
+          "string"
+        ]
+      },
+      "trends": {
+        "volunteer_growth": "string",
+        "medical_hotspots": [
+          "string"
+        ],
+        "offer_redemption_rate": "number"
+      }
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "chronic_neglect_zones": [
+        {
+          "zone_id": "D",
+          "missed_days_last_month": 12,
+          "pattern": "weekend"
+        }
+      ],
+      "risk_forecast_tomorrow": [
+        {
+          "zone_id": "D",
+          "risk_level": "high",
+          "confidence": 0.85,
+          "recommended_action": "Assign additional volunteers for the weekend."
+        },
+        {
+          "zone_id": "E",
+          "risk_level": "medium",
+          "confidence": 0.6,
+          "recommended_action": "Monitor coverage and reschedule as needed."
+        }
+      ],
+      "overburdened_volunteers": [
+        {
+          "user_id": "V005",
+          "zones_assigned": 8,
+          "burnout_risk": 0.75
+        }
+      ],
+      "weekly_insights": {
+        "coverage_percentage": 92,
+        "total_check_ins": 210,
+        "medical_cases": 15,
+        "volunteer_count": 25,
+        "recommendations": [
+          "Reduce zones handled by V005.",
+          "Increase volunteer recruitment for Zone D on weekends."
+        ]
+      },
+      "trends": {
+        "volunteer_growth": "stable",
+        "medical_hotspots": [
+          "Z1",
+          "Z3"
+        ],
+        "offer_redemption_rate": 0.68
+      }
+    },
+    "metadata": {
+      "agent_name": "Pattern & Forecasting Agent",
+      "timestamp": "2023-10-26T14:30:00Z"
+    }
+  },
+  "is_actual_tested": true,
+  "test_timestamp": "2026-02-04T09:11:29.533976",
+  "test_message_used": "Analyze this sample data for testing",
+  "actual_test_response": {
+    "status": "success",
+    "result": {
+      "chronic_neglect_zones": [
+        {
+          "zone_id": "D",
+          "missed_days_last_month": 12,
+          "pattern": "weekend"
+        }
+      ],
+      "risk_forecast_tomorrow": [
+        {
+          "zone_id": "D",
+          "risk_level": "high",
+          "confidence": 0.85,
+          "recommended_action": "Assign additional volunteers for the weekend."
+        },
+        {
+          "zone_id": "E",
+          "risk_level": "medium",
+          "confidence": 0.6,
+          "recommended_action": "Monitor coverage and reschedule as needed."
+        }
+      ],
+      "overburdened_volunteers": [
+        {
+          "user_id": "V005",
+          "zones_assigned": 8,
+          "burnout_risk": 0.75
+        }
+      ],
+      "weekly_insights": {
+        "coverage_percentage": 92,
+        "total_check_ins": 210,
+        "medical_cases": 15,
+        "volunteer_count": 25,
+        "recommendations": [
+          "Reduce zones handled by V005.",
+          "Increase volunteer recruitment for Zone D on weekends."
+        ]
+      },
+      "trends": {
+        "volunteer_growth": "stable",
+        "medical_hotspots": [
+          "Z1",
+          "Z3"
+        ],
+        "offer_redemption_rate": 0.68
+      }
+    },
+    "metadata": {
+      "agent_name": "Pattern & Forecasting Agent",
+      "timestamp": "2023-10-26T14:30:00Z"
+    }
+  },
+  "test_passed": true
+}

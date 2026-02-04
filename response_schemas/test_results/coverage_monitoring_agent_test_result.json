@@ -1,0 +1,57 @@
+{
+  "agent_name": "Coverage Monitoring Agent",
+  "agent_id": "69830c5851b9f371d4d6a6c1",
+  "test_message": "Scan all zones and identify any that haven't been fed in the last 24 hours. Zone A was last fed 26 hours ago, Zone B was fed 2 hours ago, and Zone C hasn't been fed in 48 hours. Find nearby volunteers for uncovered zones.",
+  "expected_purpose": "analyzer",
+  "timestamp": "2026-02-04T09:11:13.410218",
+  "is_valid_json": true,
+  "validation_errors": [],
+  "actual_response": {
+    "status": "success",
+    "result": {
+      "zone_status": "red",
+      "uncovered_zones": [
+        {
+          "zone_id": "Zone A",
+          "last_fed": "26 hours ago",
+          "urgency": "high"
+        },
+        {
+          "zone_id": "Zone C",
+          "last_fed": "48 hours ago",
+          "urgency": "high"
+        }
+      ],
+      "nearby_volunteers": [
+        {
+          "user_id": "volunteer_123",
+          "distance_km": 1.2,
+          "availability": "active"
+        },
+        {
+          "user_id": "volunteer_456",
+          "distance_km": 3.4,
+          "availability": "active"
+        }
+      ],
+      "alerts_created": [
+        {
+          "alert_id": "alert_001",
+          "zone_id": "Zone A",
+          "volunteers_notified": 2
+        },
+        {
+          "alert_id": "alert_002",
+          "zone_id": "Zone C",
+          "volunteers_notified": 2
+        }
+      ],
+      "escalations": []
+    },
+    "metadata": {
+      "agent_name": "Coverage Monitoring Agent",
+      "timestamp": "2023-10-11T10:23:00Z"
+    }
+  },
+  "raw_response": "{\n  \"status\": \"success\",\n  \"result\": {\n    \"zone_status\": \"red\",\n    \"uncovered_zones\": [\n      {\"zone_id\": \"Zone A\", \"last_fed\": \"26 hours ago\", \"urgency\": \"high\"},\n      {\"zone_id\": \"Zone C\", \"last_fed\": \"48 hours ago\", \"urgency\": \"high\"}\n    ],\n    \"nearby_volunteers\": [\n      {\"user_id\": \"volunteer_123\", \"distance_km\": 1.2, \"availability\": \"active\"},\n      {\"user_id\": \"volunteer_456\", \"distance_km\": 3.4, \"availability\": \"active\"}\n    ],\n    \"alerts_created\": [\n      {\"alert_id\": \"alert_001\", \"zone_id\": \"Zone A\", \"volunteers_notified\": 2},\n      {\"alert_id\": \"alert_002\", \"zone_id\": \"Zone C\", \"volunteers_notified\": 2}\n    ],\n    \"escalations\": []\n  },\n  \"metadata\": {\n    \"agent_name\": \"Coverage Monitoring Agent\",\n    \"timestamp\": \"2023-10-11T10:23:00Z\"\n  }\n}"
+}

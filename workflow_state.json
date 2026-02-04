@@ -1,0 +1,57 @@
+{
+  "workflow_created": true,
+  "agents_created": 6,
+  "manager_agent": {
+    "name": "Platform Orchestrator Agent",
+    "agent_id": "69830ce5710a251ef6c8a621",
+    "model": "gpt-4o",
+    "temperature": 0.3,
+    "top_p": 1,
+    "managed_agents_count": 5
+  },
+  "sub_agents": [
+    {
+      "name": "Coverage Monitoring Agent",
+      "agent_id": "69830c5851b9f371d4d6a6c1",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "top_p": 1,
+      "purpose": "analyzer"
+    },
+    {
+      "name": "Reminder & Engagement Agent",
+      "agent_id": "69830c70eaaf1d1b5f77f4ec",
+      "model": "gpt-4o",
+      "temperature": 0.4,
+      "top_p": 0.95,
+      "purpose": "recommendation"
+    },
+    {
+      "name": "Medical Triage Agent",
+      "agent_id": "69830c8b29c2f18838004b05",
+      "model": "gpt-4o",
+      "temperature": 0.2,
+      "top_p": 1,
+      "purpose": "analyzer"
+    },
+    {
+      "name": "Supply & Offer Matching Agent",
+      "agent_id": "69830ca651b9f371d4d6a6c2",
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "top_p": 1,
+      "purpose": "recommendation"
+    },
+    {
+      "name": "Pattern & Forecasting Agent",
+      "agent_id": "69830cc229c2f18838004b09",
+      "model": "gpt-4o",
+      "temperature": 0.3,
+      "top_p": 1,
+      "purpose": "analyzer"
+    }
+  ],
+  "response_schemas_created": 6,
+  "all_schemas_tested": true,
+  "timestamp": "2026-02-04T00:00:00Z"
+}
